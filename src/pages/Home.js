@@ -1,11 +1,11 @@
-import { HomePage } from 'components/Home/HomeStyled';
+// import { HomePage } from 'components/Home/HomeStyled';
 
 const Home = () => {
-  return (
-    <HomePage>
-      <h1>Hello World</h1>
-    </HomePage>
-  );
+  // useEffect(() => {
+
+  // }, [])
+
+  return <div>{<h1>sTweet Home</h1>}</div>;
 };
 
 export default Home;

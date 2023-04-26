@@ -1,9 +1,9 @@
-import { Cards } from 'Cards/Cards';
+import CardList from 'components/CardList/CardList';
 
 const Tweets = () => {
   return (
     <div>
-      <Cards />
+      <CardList />
     </div>
   );
 };

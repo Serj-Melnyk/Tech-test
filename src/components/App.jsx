@@ -1,29 +1,30 @@
-import { GlobalStyle } from "./GlobalStyle";
+// import { GlobalStyle } from "./GlobalStyle";
 import Home from "pages/Home";
 import Tweets from "pages/Tweets";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import { Layout } from "./Layout/Layout";
+import NotFound from "pages/NotFound";
 
 
 export const App = () => {
+
   return (
 
     <div>
-      <nav>
-
-      <span> <NavLink to='/' >Home</NavLink>  </span>
-      <span> <NavLink to='/tweets' >Tweets</NavLink> </span>
-        
-      </nav>
 
       <Routes>
-        <Route path="/" element={ <Home/> } />
-        <Route path="/tweets" element={ <Tweets/> } />
-       
 
+          <Route  path="/" element={<Layout/>}>
+         <Route index element={<Home/> } />
+        <Route path="tweets" element={ <Tweets/> } />
+        <Route path="*" element={<NotFound />} />
+
+        </Route>
+        
       </Routes>
       
-      <GlobalStyle />
     </div>
+   
 
   )
 }
